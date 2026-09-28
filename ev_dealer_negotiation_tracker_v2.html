@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EV Dealer Negotiation Tracker</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--text:#f0f6fc;--muted:#8b949e;--green:#7ee787;--yellow:#f2cc60}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1600px;margin:auto;padding:24px}h1{margin:0 0 5px;font-size:28px}h2{margin:28px 0 10px}.muted{color:var(--muted)}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.stat{background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:12px}.stat b{display:block;font-size:19px}
+.banner{padding:12px 14px;border:1px solid #2f6f48;background:#10261a;border-radius:12px;margin:14px 0;color:#c8f7d4}
+input{background:var(--card);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:9px;min-width:320px;margin:8px 0 15px}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;background:var(--card);min-width:1200px}
+th,td{padding:10px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#1f2630;position:sticky;top:0}tr:hover td{background:#1c222b}
+.note{margin-top:22px;background:var(--card);border:1px solid var(--line);padding:14px 16px;border-radius:12px}.badge{background:#20364e;color:#b9dcff;padding:3px 8px;border-radius:999px;font-size:12px}
+</style></head>
+<body><div class="wrap">
+<h1>EV Dealer Negotiation Tracker</h1><div class="muted">Polestar + 2023 Tesla Model 3 • Austin, Texas buyer</div>
+<div class="stats"><div class="stat"><b>30</b>dealer targets</div><div class="stat"><b>20</b>Polestar</div><div class="stat"><b>10</b>Tesla</div><div class="stat"><b>Hourly</b>reply monitoring</div></div>
+<div class="banner"><b>Hourly Gmail monitoring is active.</b> Replies are handled politely and professionally when appropriate. The buyer's maximum budget and competing dealer names are never disclosed. No deposit, credit authorization, signature, or binding commitment is made automatically.</div>
+<input id="q" placeholder="Search dealer, VIN, year, price…" oninput="f()">
+
+<h2>Polestar pipeline <span class="badge">20</span></h2>
+<div class="tablewrap"><table class="ft"><thead><tr><th>#</th><th>Dealer</th><th>Vehicle</th><th>VIN</th><th>Advertised</th><th>Miles</th><th>Status</th><th>Waiting on</th><th>Internal target</th></tr></thead><tbody>
+<tr><td>1</td><td>HGreg Nissan Kendall</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA2RL216910</td><td>~$24.2k</td><td>10,414</td><td>Outreach sent</td><td>CARFAX / options / OTD / shipping</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>2</td><td>AutoNation Toyota South Austin</td><td>2022 Polestar 2 LR Dual Motor</td><td>LPSED3KAXNL078706</td><td>$22,491</td><td>23,291</td><td>Price dropped $1,000</td><td>CARFAX / service / OTD</td><td>$17.5k–$18.5k</td></tr>
+<tr><td>3</td><td>Certified Autoplex</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA5RL217419</td><td>~$25.2k</td><td>~18k</td><td>Outreach sent</td><td>CARFAX / options / OTD</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>4</td><td>Auto Boutique Texas</td><td>2023 Polestar 2 LR Dual Motor</td><td>YSMED3KA6PL139676 / YSMED3KA4PL114680</td><td>~$20k–$21.7k</td><td>41k–45k</td><td>Outreach sent</td><td>Both CARFAX reports / written price</td><td>$18.5k–$19.8k</td></tr>
+<tr><td>5</td><td>Dublin Nissan INFINITI</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA6RL239204</td><td>~$23.6k</td><td>21,545</td><td>Outreach sent</td><td>CARFAX / OTD / shipping</td><td>$21.0k–$22.0k</td></tr>
+<tr><td>6</td><td>Zeigler Ford Plainwell</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA8RL227443</td><td>~$26.3k</td><td>26,956</td><td>Outreach sent</td><td>CARFAX / aggressive price</td><td>$20.5k–$21.5k</td></tr>
+<tr><td>7</td><td>Gregory INFINITI</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KAXRL220221</td><td>~$26.6k</td><td>~13k</td><td>Outreach sent</td><td>CARFAX / options / OTD</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>8</td><td>Sheehy Volvo Hunt Valley</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA0RL217361</td><td>~$24.4k</td><td>16,610</td><td>Outreach sent</td><td>Confirm live price + CARFAX</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>9</td><td>Sheehy Nissan Glen Burnie</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA2RL219581</td><td>$23,797</td><td>19,191</td><td>Reply received</td><td>CARFAX/window sticker sent; tax ZIP requested</td><td>$21.0k–$22.0k</td></tr>
+<tr><td>10</td><td>Seattle MINI</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KAXRL212040</td><td>~$25.2k</td><td>15,935</td><td>Outreach sent</td><td>CARFAX / packages / OTD</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>11</td><td>Borton Volvo Cars</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA7RL219527</td><td>~$25.3k</td><td>29,608</td><td>Outreach sent</td><td>CARFAX / service / OTD</td><td>$20.5k–$21.5k</td></tr>
+<tr><td>12</td><td>Audi Napa Valley</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KAXRL238668</td><td>~$25.7k</td><td>21,855</td><td>Outreach sent</td><td>CARFAX / OTD / shipping</td><td>$21.0k–$22.0k</td></tr>
+<tr><td>13</td><td>Veterans Ford</td><td>2023 Polestar 2 LR AWD</td><td>YSMED3KA0PL121870</td><td>$23,999</td><td>14,668</td><td>Outreach sent</td><td>CARFAX / equipment / OTD</td><td>$19.5k–$20.5k</td></tr>
+<tr><td>14</td><td>Volvo Cars Cool Springs</td><td>2023 / 2022 Polestar 2</td><td>YSMED3KA5PL120973 / LPSED3KA2NL078036</td><td>Verify</td><td>13,100 / 24,696</td><td>Outreach sent</td><td>CARFAX / price / warranty</td><td>$19k–$21k</td></tr>
+<tr><td>15</td><td>Sam Leman CDJR Peoria</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA0RL239067</td><td>$26,724</td><td>25,614</td><td>Outreach sent</td><td>CARFAX / aggressive price / OTD</td><td>$20.5k–$21.5k</td></tr>
+<tr><td>16</td><td>Cooper Ford</td><td>2024 Polestar 2 LR Single Motor</td><td>YSMFE3KA6RL246019</td><td>Verify</td><td>5,299</td><td>Outreach sent</td><td>CARFAX / packages / OTD</td><td>$20k–$21k</td></tr>
+<tr><td>17</td><td>Radley Mitsubishi</td><td>2023 Polestar 2 Single Motor</td><td>YSMEG3KA2PL115656</td><td>~$26,990 incl. fee</td><td>14,955</td><td>Outreach sent</td><td>CARFAX / price cut / OTD</td><td>$18.5k–$19.5k</td></tr>
+<tr><td>18</td><td>North Coast Mitsubishi Cleveland West</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA3RL220819</td><td>$26,247</td><td>18,971</td><td>Outreach sent</td><td>CARFAX / OTD / price match</td><td>$21k–$22k</td></tr>
+<tr><td>19</td><td>Jaffarian Volvo Cars</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA3RL216642</td><td>~$29.9k</td><td>10,358</td><td>Outreach sent</td><td>CARFAX / fees / key status</td><td>$21.5k–$22.5k</td></tr>
+<tr><td>20</td><td>Jeff Schmitt Chevrolet South</td><td>2024 Polestar 2 LR Dual Motor</td><td>YSMFD3KA1RL211214</td><td>~$26.2k–$27.4k</td><td>27,009</td><td>Outreach sent</td><td>CARFAX / OTD / aggressive price</td><td>$20.5k–$21.5k</td></tr>
+</tbody></table></div>
+
+<h2>2023 Tesla Model 3 pipeline <span class="badge">10 emails sent</span></h2>
+<div class="tablewrap"><table class="ft"><thead><tr><th>#</th><th>Dealer</th><th>Vehicle</th><th>VIN</th><th>Advertised</th><th>Miles</th><th>History surfaced</th><th>Status</th><th>Strategy</th></tr></thead><tbody>
+<tr><td>1</td><td>Certified Luxury Motors</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA4PF483719</td><td>$23,290</td><td>41,957</td><td>1-owner / no accident surfaced</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>2</td><td>Easterns Automotive Group</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA9PF713965</td><td>$24,950</td><td>35,736</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>3</td><td>Lansdale CDJR</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA0PF693668</td><td>$24,976</td><td>30,921</td><td>History report requested</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>4</td><td>Mint Auto Sales</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA0PF517199</td><td>$26,995</td><td>9,690</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Needs discount / shipping help</td></tr>
+<tr><td>5</td><td>Fred's Executive Auto</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA2PF509542</td><td>$25,390</td><td>40,600</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>6</td><td>OC Chief Auto Riverside</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA5PF508935</td><td>$25,079</td><td>32,540</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>7</td><td>Auto Merchants Inc</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA8PF459469</td><td>$24,400</td><td>43,823</td><td>1-owner / no accident surfaced; title verify</td><td>Email sent</td><td>Texas candidate</td></tr>
+<tr><td>8</td><td>Auto Boutique Texas</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA3PF648563</td><td>$26,730</td><td>29,177</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Needs meaningful discount</td></tr>
+<tr><td>9</td><td>Brickell CDJR</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA8PF575514</td><td>$25,270</td><td>48,814</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Target < $28k OTD</td></tr>
+<tr><td>10</td><td>Manly Honda</td><td>2023 Tesla Model 3 RWD</td><td>5YJ3E1EA9PF513314</td><td>$26,568</td><td>44,353</td><td>Clean title / 1-owner / no accident surfaced</td><td>Email sent</td><td>Needs discount / shipping help</td></tr>
+</tbody></table></div>
+
+<div class="note"><b>Negotiation playbook:</b> ask for CARFAX/AutoCheck and a written buyer's order first. Use anonymous market comparables, mileage, warranty remaining, inventory age, price drops, tires, missing key cards/charger, shipping and dealer add-ons as leverage. Negotiate selling price/OTD, not monthly payment. Never reveal the buyer's final ceiling.<br><br><span class="muted">Snapshot updated 2026-09-28 14:51.</span></div>
+</div>
+<script>function f(){const q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.ft tbody tr').forEach(r=>r.style.display=(!q||r.innerText.toLowerCase().includes(q))?'':'none');}</script>
+</body></html>
