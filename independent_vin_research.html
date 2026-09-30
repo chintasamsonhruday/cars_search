@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EV Dealer Negotiation Tracker — Independent VIN Research</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--text:#f0f6fc;--muted:#8b949e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1800px;margin:auto;padding:24px}h1{margin:0 0 5px;font-size:28px}h2{margin:28px 0 10px}.muted{color:var(--muted)}
+.banner{padding:12px 14px;border:1px solid #8a6d2b;background:#2a2412;border-radius:12px;margin:14px 0;color:#f7e8b0}
+input{background:var(--card);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:9px;min-width:320px;margin:8px 0 15px}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;background:var(--card);min-width:2200px}
+th,td{padding:10px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#1f2630;position:sticky;top:0}tr:hover td{background:#1c222b}
+</style>
+</head>
+<body><div class="wrap">
+<h1>EV Dealer Negotiation Tracker</h1>
+<div class="muted">Independent VIN research • GoodCar excluded • updated 2026-09-30</div>
+<div class="banner"><b>Method:</b> Exact VINs were checked against public CARFAX pages where indexed, dealer/marketplace listings, and independent VIN-history indexes. Marketplace/dealer claims are labeled. Unsupported title, auction, buyback/lemon, owner, or accident fields remain Pending rather than being guessed.</div>
+<input id="q" placeholder="Search dealer, VIN, year, price…" oninput="filterRows()">
+<div id="tables"></div>
+</div>
+<script src="polestar_data.js"></script>
+<script src="tesla_data.js"></script>
+<script>
+const headers=["Dealer","Vehicle","VIN","Price","Mileage","Owners","Accident / Damage","Title / Brands","Odometer","Auction / Buyback","Sources","Status / Next action"];
+function esc(x){return String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+function makeTable(title,rows){return '<h2>'+esc(title)+'</h2><div class="tablewrap"><table class="ft"><thead><tr>'+headers.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';}
+document.getElementById("tables").innerHTML=makeTable("Polestar pipeline",window.POLESTAR_ROWS||[])+makeTable("Tesla Model 3 pipeline / active exception",window.TESLA_ROWS||[]);
+function filterRows(){const q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.ft tbody tr').forEach(r=>r.style.display=(!q||r.innerText.toLowerCase().includes(q))?'':'none');}
+</script>
+</body></html>
